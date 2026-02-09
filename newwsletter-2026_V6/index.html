@@ -366,10 +366,10 @@
 
       .excellence-card {
         background: radial-gradient(
-          circle at 10% 10%,
-          #8d6e3e 0%,
-          #4e342e 40%,
-          #261510 100%
+          circle at 5% 5%,
+          #82582b 0%,
+          #58391c 40%,
+          #3a220f 100%
         );
         border-radius: 60px;
         padding: 60px;
@@ -615,8 +615,7 @@
 
       /* ===== SECTION EVENT ===== */
       .section-event-wrapper {
-        background-color: #3a3a3a;
-        padding: 50px 40px;
+        padding: 50px 0;
       }
 
       .event-card {
@@ -628,24 +627,21 @@
         );
         border-radius: 60px;
         padding: 50px;
-        display: flex;
-        gap: 40px;
-        align-items: center;
       }
 
       .event-text-col {
-        flex: 1;
         color: #e0e0e0;
         font-family: "Montserrat", sans-serif;
         font-size: 14px;
         line-height: 1.7;
+        min-width: 400px;
       }
 
       .event-category {
         font-family: "Montserrat", sans-serif;
         font-weight: 900;
         font-size: 26px;
-        color: #e65100;
+        color: #ffa726;
         margin-bottom: 15px;
         text-transform: uppercase;
       }
@@ -662,14 +658,12 @@
 
       .event-text-col p {
         margin-bottom: 20px;
+        font-family: "Montserrat", sans-serif;
       }
+
       .event-text-col p strong {
         font-weight: 700;
         color: #f5f5f5;
-      }
-
-      .event-image-col {
-        flex: 0 0 40%;
       }
 
       .event-image-col img {
@@ -760,6 +754,12 @@
         border: 2px solid #ff8c42;
         border-radius: 5px;
         transition: all 0.3s ease;
+      }
+
+      .event-content-row {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
       }
 
       .social-links a:hover {
@@ -876,9 +876,12 @@
         }
 
         .event-card {
-          flex-direction: column;
           padding: 30px 25px;
           border-radius: 40px;
+        }
+
+        .event-content-row {
+          flex-direction: column;
         }
 
         .event-title {
@@ -1169,6 +1172,36 @@
             alt="WhatsApp Business API"
             class="content-image"
           />
+        </div>
+      </div>
+
+      <!-- SECTION EVENT -->
+      <div class="section-event-wrapper">
+        <div class="event-card">
+          <h3 class="event-category">Évènement CX</h3>
+          <h2 class="event-title">
+            MCC sera présent au CCW Berlin 2026, rendez-vous européen de
+            référence de la relation client
+          </h2>
+          <div class="event-content-row">
+            <div class="event-text-col">
+              <p>
+                Du <strong>24 au 26 février</strong>, les équipes échangeront
+                avec les décideurs CX autour de modèles d'externalisation
+                performants, de conduite d'activité et d'usages concrets de l'IA
+                appliquée aux opérations.
+              </p>
+              <p>
+                Un temps fort pour confronter les pratiques, partager les
+                retours terrain et adresser les exigences des marchés les plus
+                matures.
+              </p>
+              <a href="#" class="btn-glow">En savoir plus</a>
+            </div>
+            <div class="event-image-col">
+              <img src="CCW.jpg" alt="CCW Berlin 2026" />
+            </div>
+          </div>
         </div>
       </div>
 
