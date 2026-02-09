@@ -362,11 +362,15 @@
       /* --- Excellence Section --- */
       .section-excellence-wrapper {
         background-color: #222;
-        padding: 50px;
       }
 
       .excellence-card {
-        background: linear-gradient(135deg, #5d4037 0%, #3e2723 100%);
+        background: radial-gradient(
+          circle at 10% 10%,
+          #8d6e3e 0%,
+          #4e342e 40%,
+          #261510 100%
+        );
         border-radius: 60px;
         padding: 60px;
         color: white;
@@ -388,7 +392,7 @@
         font-weight: 700;
         font-style: italic;
         font-size: 26px;
-        color: #ff9800;
+        color: #e65100;
         margin-bottom: 40px;
         line-height: 1.3;
       }
@@ -399,6 +403,25 @@
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .video-container::before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 80px;
+        background: radial-gradient(
+          ellipse,
+          rgba(255, 152, 0, 0.5) 0%,
+          rgba(230, 81, 0, 0.3) 40%,
+          transparent 70%
+        );
+        filter: blur(40px);
+        z-index: -1;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        pointer-events: none;
       }
 
       .video-container img {
@@ -488,16 +511,171 @@
         color: white;
         font-family: "Montserrat", sans-serif;
         font-weight: 800;
-        font-size: 14px;
-        padding: 12px 35px;
+        font-size: 10px;
+        padding: 8px 25px;
         border-radius: 50px;
         box-shadow: 0 4px 15px rgba(251, 140, 0, 0.4);
         transition: transform 0.2s;
+        margin-top: 1rem;
+        margin-left: 65%;
       }
 
       .btn-glow:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(251, 140, 0, 0.5);
+      }
+
+      /* ===== SECTION NEWS IA ===== */
+      .section-news-ia {
+        padding: 50px 40px;
+        text-align: left;
+      }
+
+      .news-ia-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 32px;
+        color: #ff8c42;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+      }
+
+      .news-ia-subtitle {
+        font-family: "Aleo", serif;
+        font-style: italic;
+        font-weight: 700;
+        max-width: 70%;
+        font-size: 26px;
+        color: #ff8c42;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      /* ===== SECTION AI LAB CONTENT ===== */
+      .section-ia-content {
+        padding: 0 40px 40px 40px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .ia-image-col {
+        flex: 0 0 45%;
+      }
+
+      .ia-image-col img {
+        width: 100%;
+        border-radius: 40px;
+        display: block;
+      }
+
+      .ia-text-col {
+        flex: 1;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        line-height: 1.7;
+        color: #eee;
+      }
+
+      .ia-text-col p {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+      }
+
+      .ia-text-col strong {
+        color: #ff9800;
+        font-weight: 700;
+      }
+
+      .ia-impact-list {
+        list-style: none;
+        padding-left: 20px;
+      }
+
+      .ia-impact-list li {
+        position: relative;
+      }
+
+      .ia-impact-list li::before {
+        content: "•";
+        color: #ff9800;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 12px;
+      }
+
+      .ia-impact-list li strong {
+        color: white;
+      }
+
+      /* ===== SECTION EVENT ===== */
+      .section-event-wrapper {
+        background-color: #3a3a3a;
+        padding: 50px 40px;
+      }
+
+      .event-card {
+        background: radial-gradient(
+          circle at 5% 5%,
+          #82582b 0%,
+          #58391c 40%,
+          #3a220f 100%
+        );
+        border-radius: 60px;
+        padding: 50px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .event-text-col {
+        flex: 1;
+        color: #e0e0e0;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .event-category {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 26px;
+        color: #e65100;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      .event-title {
+        font-family: "Aleo", serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 24px;
+        line-height: 1.4;
+        color: #ffa726;
+        margin-bottom: 30px;
+      }
+
+      .event-text-col p {
+        margin-bottom: 20px;
+      }
+      .event-text-col p strong {
+        font-weight: 700;
+        color: #f5f5f5;
+      }
+
+      .event-image-col {
+        flex: 0 0 40%;
+      }
+
+      .event-image-col img {
+        width: 100%;
+        border-radius: 30px;
+        display: block;
       }
 
       /* ===== REGULAR SECTIONS ===== */
@@ -675,6 +853,58 @@
         .whatsapp-image-col {
           width: 100%;
         }
+
+        .section-news-ia {
+          padding: 40px 25px;
+        }
+
+        .news-ia-title {
+          font-size: 24px;
+        }
+
+        .news-ia-subtitle {
+          font-size: 18px;
+        }
+
+        .section-ia-content {
+          flex-direction: column;
+          padding: 40px 25px;
+        }
+
+        .section-event-wrapper {
+          padding: 40px 20px;
+        }
+
+        .event-card {
+          flex-direction: column;
+          padding: 30px 25px;
+          border-radius: 40px;
+        }
+
+        .event-title {
+          font-size: 20px;
+        }
+
+        .event-category {
+          font-size: 22px;
+        }
+
+        .section-excellence-wrapper {
+          padding: 20px;
+        }
+
+        .excellence-card {
+          padding: 30px 20px;
+          border-radius: 40px;
+        }
+
+        .excellence-title {
+          font-size: 28px;
+        }
+
+        .excellence-subtitle {
+          font-size: 20px;
+        }
       }
     </style>
   </head>
@@ -794,47 +1024,116 @@
         </div>
       </div>
 
-      <!-- SECTION 1: EXCELLENCE CLIENT -->
-      <div class="section">
-        <h2 class="section-title">Excellence Client</h2>
-        <div class="content-block">
-          <h3 class="section-subtitle">
-            Groupe PVCP : 5 ans de collaboration et 6 trophées "Élu Service
-            Client de l'Année"
-          </h3>
+      <!-- SECTION: EXCELLENCE CLIENT -->
+      <div class="section-excellence-wrapper">
+        <div class="excellence-card">
+          <div class="excellence-title">EXCELLENCE CLIENT</div>
+          <div class="excellence-subtitle">
+            Groupe PVCP : 5 ans de collaboration et 6 trophées “Élu Service
+            Client de l'Année”
+          </div>
 
-          <a href="https://youtu.be/Vzu0dOBETmU" target="_blank" rel="noopener">
-            <img
-              src="278A4142.JPG"
-              alt="Excellence Client"
-              class="content-image"
-            />
-          </a>
+          <div class="video-container">
+            <a
+              href="https://youtu.be/Vzu0dOBETmU"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="278A4142.JPG" alt="Vidéo Excellence Client" />
+              <div class="play-button-overlay"></div>
+            </a>
+          </div>
 
-          <p>
-            Nous célébrons une collaboration fructueuse avec le Groupe PVCP,
-            marquée par l'excellence et la reconnaissance continue de notre
-            engagement envers la satisfaction client. Cette série de trophées
-            témoigne de notre détermination à fournir des services
-            exceptionnels.
-          </p>
+          <div class="excellence-text">
+            <p>Le début d'année s'ouvre avec une fierté partagée :</p>
+            <p>
+              Le Groupe Pierre & Vacances – Center Parcs a remporté 6
+              distinctions “Élu Service Client de l'Année” : 3 fois en France et
+              3 fois en Allemagne.
+            </p>
+            <p>Un accomplissement majeur qui témoigne de :</p>
+            <ul class="excellence-list">
+              <li>
+                <strong>5 ans de collaboration solide</strong> entre MCC et
+                PVCP,
+              </li>
+              <li>
+                une exigence quotidienne portée sur la qualité du service,
+              </li>
+              <li>un pilotage précis et une amélioration continue,</li>
+              <li>
+                un engagement partagé : celui de placer l'expérience client au
+                centre.
+              </li>
+            </ul>
+            <p>
+              Ces distinctions réaffirment un modèle fondé sur performance,
+              proximité et excellence opérationnelle.
+            </p>
+          </div>
 
           <a
             href="https://youtu.be/Vzu0dOBETmU"
-            class="btn"
+            class="btn-glow"
             target="_blank"
             rel="noopener"
-            >Voir la vidéo</a
+            >En savoir plus</a
           >
-        </div>
-
-        <div class="content-block">
-          <img src="CCW.jpg" alt="CCW Event 2026" class="content-image" />
         </div>
       </div>
 
-      <!-- SECTION 2: NEWS IA -->
-      <div class="section">
+      <!-- SECTION NEWS IA -->
+      <div class="section-news-ia">
+        <h2 class="news-ia-title">NEWS IA</h2>
+        <h3 class="news-ia-subtitle">
+          LAB IA by MCC : Copilote AI s'impose comme un standard opérationnel
+        </h3>
+      </div>
+
+      <!-- SECTION AI LAB CONTENT -->
+      <div class="section-ia-content">
+        <div class="ia-image-col">
+          <img src="AI LAB.jpg" alt="AI LAB by MCC" />
+        </div>
+        <div class="ia-text-col">
+          <p>
+            2026 démarre avec une accélération majeure autour de
+            <strong>Copilote AI</strong>, désormais utilisé sur un périmètre
+            élargi.
+          </p>
+          <p>
+            Les impacts mesurés en production confirment un changement d'échelle
+            :
+          </p>
+          <ul class="ia-impact-list">
+            <li><strong>-40 %</strong> sur les délais de réponse,</li>
+            <li><strong>-30 %</strong> sur les charges opérationnelles,</li>
+            <li><strong>-15 %</strong> sur le churn,</li>
+            <li>
+              un <strong>coaching en temps réel</strong> qui améliore
+              durablement la qualité.
+            </li>
+          </ul>
+          <p>
+            Le <strong>LAB IA</strong> continue ainsi d'inscrire MCC comme un
+            acteur clé de la
+            <strong
+              >relation client augmentée, multilingue et responsable</strong
+            >, où la technologie amplifie la performance tout en préservant la
+            dimension humaine.
+          </p>
+          <a
+            href="https://marketingcallcenter.net/blog/lab-ia-by-mcc-quand-lintelligence-artificielle-devient-notre-levier-de-performance-strategique-incontournable/"
+            class="btn-glow"
+            target="_blank"
+            rel="noopener"
+            >En savoir plus</a
+          >
+        </div>
+      </div>
+
+      <!-- SECTION OLD (À SUPPRIMER SI NÉCESSAIRE) -->
+      <div class="section" style="display: none">
         <h2 class="section-title">News IA</h2>
         <div class="content-block">
           <h3 class="section-subtitle">
@@ -873,31 +1172,7 @@
         </div>
       </div>
 
-      <!-- FOOTER -->
-      <div class="footer">
-        <h3>Suivez-nous sur nos réseaux sociaux</h3>
-        <div class="social-links">
-          <a
-            href="https://www.facebook.com/MCC2020?mibextid=wwXIfr&rdid=sknI4mCQCOUEt5Nv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DVc21HhmP%2F%3Fmibextid%3DwwXIfr#"
-            target="_blank"
-            rel="noopener"
-            >Facebook</a
-          >
-          <a
-            href="https://www.instagram.com/mcc.maroc?igsh=MWQ4YXV3cHRwb3oxcA=="
-            target="_blank"
-            rel="noopener"
-            >Instagram</a
-          >
-          <a
-            href="https://www.linkedin.com/company/mcc-bpo/"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn</a
-          >
-        </div>
-        <p>&copy; 2026 Marketing Call Center. Tous droits réservés.</p>
-      </div>
+      <!-- FOOTER SUPPRIMÉ -->
     </div>
   </body>
 </html>
