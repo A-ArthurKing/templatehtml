@@ -641,7 +641,7 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 900;
         font-size: 26px;
-        color: #ffa726;
+        color: #ff7a3d;
         margin-bottom: 15px;
         text-transform: uppercase;
       }
@@ -652,7 +652,7 @@
         font-style: italic;
         font-size: 24px;
         line-height: 1.4;
-        color: #ffa726;
+        color: #ff7a3d;
         margin-bottom: 30px;
       }
 
@@ -711,7 +711,7 @@
 
       .btn {
         display: inline-block;
-        background-color: #ff8c42;
+        background-color: #ff7a3d;
         color: white;
         padding: 12px 28px;
         border-radius: 5px;
@@ -772,6 +772,42 @@
         font-size: 12px;
         color: #999;
         color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* ===== FINAL FOOTER ===== */
+      .final-footer {
+        background-color: #e65100;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .final-footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .final-footer li {
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: white;
+        margin: 5px 10px;
+      }
+
+      .final-footer li:not(:last-child)::after {
+        content: "•";
+        color: white;
+        margin-left: 20px;
+      }
+
+      .final-footer a {
+        color: white;
+        text-decoration: none;
       }
 
       /* ===== RESPONSIVE ===== */
@@ -907,6 +943,17 @@
 
         .excellence-subtitle {
           font-size: 20px;
+        }
+
+        .final-footer ul {
+          flex-direction: column;
+        }
+        .final-footer li {
+          margin: 8px 0;
+        }
+        .final-footer li:not(:last-child)::after {
+          content: "";
+          margin-left: 0;
         }
       }
     </style>
@@ -1203,6 +1250,18 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- FINAL FOOTER -->
+      <div class="final-footer">
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Traitement des données RGPD</a></li>
+          <li>
+            <a href="#">Liens vers site corporate et réseaux sociaux</a>
+          </li>
+        </ul>
       </div>
 
       <!-- FOOTER SUPPRIMÉ -->
