@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter MCC 2026 - #1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        font-family: "Montserrat", sans-serif;
+        color: #333;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        margin-top: 0;
+      }
+
+      p {
+        font-family: "Aleo", serif;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ===== HERO SECTION ===== */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #e06831 0%,
+          #e06831 40%,
+          #d9534f 100%
+        );
+        padding: 40px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 4rem 4rem;
+      }
+
+      /* --- Row 1: Header --- */
+      .hero-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+      }
+
+      .hero-header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .mcc-logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: white;
+        padding: 5px;
+        border: 3px solid rgba(255, 255, 255, 0.4);
+        flex-shrink: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        object-fit: contain;
+      }
+
+      .header-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .tagline {
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+      }
+
+      .glass-pill {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 6px 14px;
+        border-radius: 50px;
+        font-size: 10px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .newsletter-number {
+        font-family: "Aleo", serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 28px;
+        color: #333; /* Dark/Black as requested */
+        text-transform: uppercase;
+        align-self: flex-start;
+        padding-top: 10px;
+      }
+
+      /* --- Row 2: Title --- */
+      .hero-title-section {
+        text-align: left;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
+
+      .hero-title-main {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900; /* Black weight */
+        font-size: 3.3rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+      }
+
+      .hero-title-sub {
+        display: block;
+        font-family: "Aleo", serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 3.3rem;
+        line-height: 1.1;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      /* --- Row 3: Content --- */
+      .hero-content-row {
+        display: flex;
+        gap: 40px;
+      }
+
+      .hero-text-col {
+        flex: 1;
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+      .hero-text-col p {
+        color: white;
+        margin-bottom: 15px;
+        font-family: "Montserrat", sans-serif !important;
+      }
+
+      .hero-text-col strong {
+        color: white;
+        font-weight: 800;
+      }
+
+      .hero-image-col {
+        flex: 0 0 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-decoration-circle {
+        position: absolute;
+        width: 380px;
+        height: 380px;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0.05)
+        );
+        border-radius: 50%;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: -1;
+        bottom: -140px;
+        right: -50px;
+      }
+
+      .hero-image-col img {
+        width: 110%;
+        height: auto;
+        max-width: 400px;
+        display: block;
+        margin-bottom: -6rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* ===== REGULAR SECTIONS ===== */
+      .section {
+        padding: 50px 50px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .section:last-child {
+        border-bottom: none;
+      }
+
+      .section-title {
+        font-size: 32px;
+        font-weight: 900;
+        color: #ff8c42;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .section-subtitle {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #222;
+      }
+
+      .content-block {
+        margin-bottom: 35px;
+      }
+
+      .content-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+        border-radius: 8px;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #ff8c42;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 5px;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 15px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #ff7a3d;
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background: linear-gradient(135deg, #222 0%, #1a1a1a 100%);
+        color: white;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .footer h3 {
+        font-size: 22px;
+        margin-bottom: 25px;
+        color: #ff8c42;
+      }
+
+      .social-links {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        margin: 0 15px;
+        color: #ff8c42;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 8px 16px;
+        border: 2px solid #ff8c42;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background-color: #ff8c42;
+        color: white;
+      }
+
+      .footer p {
+        margin-top: 25px;
+        font-size: 12px;
+        color: #999;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media screen and (max-width: 768px) {
+        .hero-header {
+          flex-direction: column;
+          gap: 20px;
+          align-items: center;
+          text-align: center;
+        }
+
+        .hero-header-left {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .newsletter-number {
+          align-self: center;
+          padding-top: 0;
+          margin-top: 10px;
+        }
+
+        .hero-title-main,
+        .hero-title-sub {
+          font-size: 28px;
+        }
+
+        .hero-content-row {
+          flex-direction: column;
+        }
+
+        .hero-image-col {
+          flex: 0 0 auto;
+          width: 80%;
+          max-width: 300px;
+          margin-top: 20px;
+        }
+
+        .section {
+          padding: 30px 25px;
+        }
+
+        .section-title {
+          font-size: 24px;
+        }
+
+        .section-subtitle {
+          font-size: 18px;
+        }
+
+        .footer {
+          padding: 30px 20px;
+        }
+
+        .social-links a {
+          margin: 5px 8px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HERO SECTION -->
+      <div class="hero">
+        <!-- Section 1: Header -->
+        <div class="hero-header">
+          <div class="hero-header-left">
+            <img
+              src="logo-marketing-call-center.png"
+              alt="MCC Logo"
+              class="mcc-logo"
+            />
+            <div class="header-info">
+              <p class="tagline">
+                Votre partenaire en outsourcing depuis plus de 20 ans
+              </p>
+              <div class="glass-pill">
+                Expérience Client • BPO & Back-office • Technologie CX & AI
+              </div>
+            </div>
+          </div>
+          <div class="newsletter-number">NEWSLETTER #1</div>
+        </div>
+
+        <!-- Section 2: Title -->
+        <div class="hero-title-section">
+          <span class="hero-title-main">UNE ANNÉE QUI PROLONGE</span>
+          <span class="hero-title-sub">LA DYNAMIQUE DES 20 ANS</span>
+        </div>
+
+        <!-- Section 3: Content -->
+        <div class="hero-content-row">
+          <div class="hero-text-col">
+            <p>
+              Après une année 2025 marquée par notre 20<sup>ème</sup>
+              anniversaire et par des avancées majeures dans l'expérience client
+              augmentée,
+              <strong
+                >2026 s'ouvre avec la même énergie : innovation, IA, nouveaux
+                canaux et reconnaissance internationale.</strong
+              >
+            </p>
+            <p>
+              Dans cette édition de février un focus sur les actualités qui
+              donnent le ton de cette nouvelle année.
+            </p>
+          </div>
+          <div class="hero-image-col">
+            <div class="hero-decoration-circle"></div>
+            <img src="SitewebMCC2.png" alt="Femme MCC" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: EXCELLENCE CLIENT -->
+      <div class="section">
+        <h2 class="section-title">Excellence Client</h2>
+        <div class="content-block">
+          <h3 class="section-subtitle">
+            Groupe PVCP : 5 ans de collaboration et 6 trophées "Élu Service
+            Client de l'Année"
+          </h3>
+
+          <a href="https://youtu.be/Vzu0dOBETmU" target="_blank" rel="noopener">
+            <img
+              src="278A4142.JPG"
+              alt="Excellence Client"
+              class="content-image"
+            />
+          </a>
+
+          <p>
+            Nous célébrons une collaboration fructueuse avec le Groupe PVCP,
+            marquée par l'excellence et la reconnaissance continue de notre
+            engagement envers la satisfaction client. Cette série de trophées
+            témoigne de notre détermination à fournir des services
+            exceptionnels.
+          </p>
+
+          <a
+            href="https://youtu.be/Vzu0dOBETmU"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            >Voir la vidéo</a
+          >
+        </div>
+
+        <div class="content-block">
+          <img src="CCW.jpg" alt="CCW Event 2026" class="content-image" />
+        </div>
+      </div>
+
+      <!-- SECTION 2: NEWS IA -->
+      <div class="section">
+        <h2 class="section-title">News IA</h2>
+        <div class="content-block">
+          <h3 class="section-subtitle">
+            LAB IA by MCC : Copilote AI s'impose comme un standard opérationnel
+          </h3>
+
+          <a
+            href="https://marketingcallcenter.net/blog/lab-ia-by-mcc-quand-lintelligence-artificielle-devient-notre-levier-de-performance-strategique-incontournable/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="AI%20LAB.jpg" alt="LAB IA by MCC" class="content-image" />
+          </a>
+
+          <p>
+            L'intelligence artificielle redéfinit nos standards opérationnels.
+            Découvrez comment notre Copilote AI devient un levier de performance
+            stratégique incontournable pour nos clients et nos équipes.
+          </p>
+
+          <a
+            href="https://marketingcallcenter.net/blog/lab-ia-by-mcc-quand-lintelligence-artificielle-devient-notre-levier-de-performance-strategique-incontournable/"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            >Lire l'article</a
+          >
+        </div>
+
+        <div class="content-block">
+          <img
+            src="xl_whatsapp_business_api_29ce929.jpg"
+            alt="WhatsApp Business API"
+            class="content-image"
+          />
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <h3>Suivez-nous sur nos réseaux sociaux</h3>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/MCC2020?mibextid=wwXIfr&rdid=sknI4mCQCOUEt5Nv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DVc21HhmP%2F%3Fmibextid%3DwwXIfr#"
+            target="_blank"
+            rel="noopener"
+            >Facebook</a
+          >
+          <a
+            href="https://www.instagram.com/mcc.maroc?igsh=MWQ4YXV3cHRwb3oxcA=="
+            target="_blank"
+            rel="noopener"
+            >Instagram</a
+          >
+          <a
+            href="https://www.linkedin.com/company/mcc-bpo/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+        <p>&copy; 2026 Marketing Call Center. Tous droits réservés.</p>
+      </div>
+    </div>
+  </body>
+</html>
